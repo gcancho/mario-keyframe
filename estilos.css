@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #000;
+}
+
+.contenedor-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.contenedor-img .btn-girar{
+    display: block;
+    cursor: pointer;
+    background: rgba(26, 26, 197, 0.7);
+    border: 1px solid #fff;
+    color: #fff;
+    width: 80px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+.contenedor-img .btn-girar:hover{
+    background: rgba(26, 26, 197, 0.9);
+}
+
+.contenedor-img .imagen-mario{
+   display: block;
+    width: 150px;
+}
+
+.contenedor-img .imagen-mario.active{
+    width: 150px;
+    animation: girar 3s infinite;
+    /* animation-name: girar; */
+    /* animation-duration: 3s; */
+}
+
+@keyframes girar{
+    0%{
+        /* background: #000; */
+    }
+    50%{
+        /* background: red; */
+        transform: rotate(360deg);
+    }
+    100%{
+        /* background: blue; */
+        transform: rotate(720deg);
+    }
+}
